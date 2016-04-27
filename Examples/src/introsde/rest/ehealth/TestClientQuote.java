@@ -91,6 +91,7 @@ public class TestClientQuote {
 		resp = TestClientQuote.getConnectionOutputJSON(con);
 		responseCode = con.getResponseCode();
 		System.out.println("=> HTTP Status: " + responseCode);
+        
 		//System.out.println(resp);
         
         //System.out.println("ESPERIMENTIIIII");
@@ -117,7 +118,7 @@ public class TestClientQuote {
        //rimettere perche ho superato il limite di richieste JSONObject hits = json.getJSONObject("contents");
         
         
-        
+       
         
         
 	}

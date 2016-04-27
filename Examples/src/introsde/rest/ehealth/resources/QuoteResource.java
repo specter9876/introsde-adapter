@@ -107,6 +107,8 @@ public class QuoteResource {
 		resp = QuoteResource.getConnectionOutputJSON(con);
 		responseCode = con.getResponseCode();
 		System.out.println("=> HTTP Status: " + responseCode);
+        
+        if(responseCode.equals(200)){
 		System.out.println(resp);
         
         JSONObject root = new JSONObject(resp);
@@ -126,6 +128,10 @@ public class QuoteResource {
         
         String quote=name.getString("quote");
         return quote;
+        }
+        else{
+            return "Reach limit of dayli quot for freee";
+        }
     }
     
    
