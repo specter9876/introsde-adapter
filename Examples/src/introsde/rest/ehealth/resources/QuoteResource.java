@@ -108,7 +108,7 @@ public class QuoteResource {
 		responseCode = con.getResponseCode();
 		System.out.println("=> HTTP Status: " + responseCode);
         
-        if(responseCode.equals(200)){
+        if(responseCode==200){
 		System.out.println(resp);
         
         JSONObject root = new JSONObject(resp);
@@ -138,19 +138,29 @@ public class QuoteResource {
     private static String getConnectionOutputJSON(HttpURLConnection con)
     throws IOException, TransformerException, ParserConfigurationException, SAXException {
 		//PrintWriter writer = new PrintWriter("out.json", "UTF-8");
+        System.out.println("FLAAAGGGGG00000");
+        
+        try{
 		BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 		String inputLine;
 		StringBuffer response = new StringBuffer();
+        System.out.println("FLAAAGGGGG11111");
         
 		while ((inputLine = in.readLine()) != null) {
 			response.append(inputLine);
 		}
+        System.out.println("FLAAAGGGGG22222222");
 		in.close();
 		String retval = new GsonBuilder().setPrettyPrinting().create()
         .toJson(new JsonParser().parse(response.toString()));
+        System.out.println("FLAAAGGGGG33333");
 		//writer.write(retval);
 		//writer.close();
 		return retval;
+        }
+        catch(Exception ex){
+            return "";
+        }
 	}
 
     
