@@ -130,7 +130,7 @@ public class QuoteResource {
         return quote;
         }
         else{
-            return "Reach limit of dayli quot for freee";
+            return "Reached limit of dayly quote available for free account";
         }
     }
     
