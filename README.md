@@ -1,6 +1,42 @@
 # introsde-adapter
-Available at https://infinite-garden-2438.herokuapp.com/sdelab
-Resources:
--https://infinite-garden-2438.herokuapp.com/sdelab/quote
--https://infinite-garden-2438.herokuapp.com/sdelab/food/{type}
 
+Root available at https://infinite-garden-2438.herokuapp.com/sdelab
+
+## Resources:
+
+### QUOTE
+
+* https://infinite-garden-2438.herokuapp.com/sdelab/quote 
+
+Returns an TEXT_XML containing the quote. 
+
+### FOOD
+
+The results are in XML:
+
+<foods>
+    <food>
+        <calories>2176.272</calories>
+        <description>8 small whiting fish or smelt4 cups vegetable oil</description>
+        <idFood>0</idFood>
+        <name>Deep Fried Fish Bones</name>
+        <type>fish</type>
+    </food>
+    <food>
+        <calories>203.02224999999999</calories>
+        <description>Ajwain fish 200 gramsChili powder tspPepper powder 1/4 tspTurmeric powder tspSalt tspCurry leaves few</description>
+        <idFood>1</idFood>
+        <name>Ajwain fish Fry ( South Indian )</name>
+        <type>fish</type>
+    </food>
+</foods>
+
+#### GET
+
+* https://infinite-garden-2438.herokuapp.com/sdelab/food/{type}
+
+Retrieves all food that contains {type}
+
+* https://infinite-garden-2438.herokuapp.com/sdelab/food/{type}/{caloriesBound}
+
+Retrieves all food that contains {type} but filtered for calories
