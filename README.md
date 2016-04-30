@@ -12,7 +12,7 @@ Returns an TEXT_XML containing the quote.
 
 ### FOOD
 
-The results are in XML:
+The results are in XML and JSON:
 
 <foods>
     <food>
@@ -30,6 +30,23 @@ The results are in XML:
         <type>fish</type>
     </food>
 </foods>
+
+[
+    {
+        "idFood": 0,
+        "description": "8 small whiting fish or smelt4 cups vegetable oil",
+        "type": "fish",
+        "calories": 2176.272,
+        "name": "Deep Fried Fish Bones"
+    },
+    {
+        "idFood": 1,
+        "description": "Ajwain fish 200 gramsChili powder tspPepper powder 1/4 tspTurmeric powder  tspSalt  tspCurry leaves few",
+        "type": "fish",
+        "calories": 203.02224999999999,
+        "name": "Ajwain fish Fry ( South Indian )"
+    }
+    ]
 
 #### GET
 
